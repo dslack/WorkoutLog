@@ -1,0 +1,27 @@
+{
+  "name": "AngularWorkout",
+  "version": "0.0.1",
+  "authors": [
+    "Dan Slack <dan@terrazzotechnologies.com>"
+  ],
+  "description": "A Workout Tracker using AngularJS",
+  "license": "MIT",
+  "homepage": "https://github.com/dslack/AngularIonicWorkout",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.24",
+    "bootstrap": "~3.2.0",
+    "angular-route": "~1.2.24",
+    "angular-resource": "~1.2.24",
+    "jquery": "~2.1.1",
+    "json2": "*",
+    "underscore": "~1.7.0"
+  }
+}

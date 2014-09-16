@@ -1,0 +1,23 @@
+<h3>Workout for {{workout.type}} On {{workout.date | date:"MMMM d, yyyy"}}</h3>
+<form role="form" class="form-horizontal">
+    <fieldset disabled>
+    <div ng-repeat="exercise in workout.exercises" class="form-group">
+        <label for="{{$index}}" class="col-md-2 control-label">{{exercise.name}}</label>
+
+        <div ng-if="exercise.type == 'R'">
+            <div class="col-md-1"><label for="{{$index}}" class="control-label">Reps:</label></div>
+            <div  class="col-md-1"><input class="form-control" type="text" placeholder="{{exercise.reps}}"/></div>
+        </div>
+        <div ng-if="exercise.type == 'RW'">
+            <div class="col-md-1"><label for="{{$index}}" class="control-label">Reps:</label></div>
+            <div  class="col-md-1"><input class="form-control" type="text" placeholder="{{exercise.reps}}"/></div>
+            <div class="col-md-1"><label for="{{$index}}" class="control-label">Weight:</label></div>
+            <div  class="col-md-1"><input class="form-control" type="text" placeholder="{{exercise.weight}}"/></div>
+        </div>
+        <div ng-if="exercise.type == 'L'">
+            <div class="col-md-1"><label for="{{$index}}" class="control-label">Length:</label></div>
+            <div  class="col-md-1"><input class="form-control" type="text" placeholder="{{exercise.length}}"/></div>
+        </div>
+    </div>
+    </fieldset>
+</form>

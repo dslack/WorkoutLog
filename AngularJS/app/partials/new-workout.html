@@ -1,0 +1,21 @@
+<h3>New Workout for {{data.type}}</h3>
+<form role="form" class="form-horizontal">
+    <div ng-repeat="exercise in data.workout.exercises" class="form-group">
+        <label for="{{$index}}" class="col-sm-2 control-label">{{exercise.name}}</label>
+        <div ng-if="exercise.type == 'R'" class="col-sm-2">
+            <input type="text" class="form-control" ng-model="data.workout.exercises[$index].reps" id="{{$index}}" placeholder="Reps"/>
+        </div>
+        <div ng-if="exercise.type == 'RW'">
+            <div  class="col-sm-2">
+                <input type="text" class="form-control" ng-model="data.workout.exercises[$index].reps" id="{{$index}}" placeholder="Reps"/>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" ng-model="data.workout.exercises[$index].weight" placeholder="Weight"/>
+            </div>
+        </div>
+        <div ng-if="exercise.type == 'L'" class="col-sm-2">
+            <input type="text" class="form-control" id="{{$index}}" ng-model="data.workout.exercises[$index].length" placeholder="Length"/>
+        </div>
+    </div>
+    <button class="col-sm-offset-8 col-sm-2 btn btn-success" ng-click="saveWorkout()">Save Workout</button>
+</form>
