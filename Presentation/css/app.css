@@ -1,0 +1,17 @@
+#logo {
+    border-width:1px;
+}
+
+.reveal .fa {
+    font-family: 'FontAwesome';
+    font-style: normal;
+}
+
+.form-style input, .form-style button{
+    padding:5px;
+    font-size:100%;
+}
+
+html .reveal .slides .left {
+    text-align:left;
+}
