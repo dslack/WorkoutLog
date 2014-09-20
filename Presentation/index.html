@@ -195,7 +195,24 @@ angular.module('AngularDemo', ['ngRoute']).config(function($routeProvider){
                     </section>
                     <section>
                         <h2>Routing and Views</h2>
-                        <iframe width="100%" height="500" src="http://jsfiddle.net/dslack/kt9pjuhh/embedded/js,html,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                        <div data-height="268" data-theme-id="8611" data-slug-hash="Degxf" data-default-tab="js" data-user="dslack" class='codepen'><pre><code>angular.module(&#39;AngularDemo&#39;, [&#39;ngRoute&#39;]).config(function($routeProvider){
+                            $routeProvider
+                            .when(&#39;/&#39;, {
+                            templateUrl: &#39;main.html&#39;,
+                            controller: &#39;MainController&#39;
+                            })
+                            .when(&#39;/page1&#39;,{
+                            templateUrl: &#39;page1.html&#39;,
+                            controller: &#39;Page1Controller&#39;
+                            })
+                            .otherwise({
+                            redirectTo: &#39;/&#39;
+                            })
+                            })
+                            .controller(&quot;MainController&quot;, function($scope){})
+                            .controller(&quot;Page1Controller&quot;, function($scope){});</code></pre>
+                            <p>See the Pen <a href='http://codepen.io/dslack/pen/Degxf/'>Degxf</a> by Dan Slack (<a href='http://codepen.io/dslack'>@dslack</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+                        </div><script async src="//codepen.io/assets/embed/ei.js"></script>
                     </section>
                 </section>
                 <section>
@@ -223,7 +240,25 @@ angular.module('AngularDemo', ['ngRoute']).config(function($routeProvider){
                     </section>
                     <section>
                         <h2>Services</h2>
-                        <iframe width="100%" height="500" src="http://jsfiddle.net/dslack/c462oywf/embedded/js,html,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                        <div data-height="382" data-theme-id="8611" data-slug-hash="HsiDa" data-default-tab="js" data-user="dslack" class='codepen'><pre><code>angular.module(&#39;AngularDemo&#39;, [])
+                            .factory(&#39;EchoService&#39;, function($http){
+                            return {
+                            get: function(){
+                            return $http.get(&#39;https://public.opencpu.org/ocpu/library/MASS/data/housing/json&#39;)
+                            .then(function(response){
+                            return response.data;
+                            })
+                            }
+                            };
+                            })
+                            .controller(&#39;MyController&#39;, function($scope, EchoService){
+                            EchoService.get().then(function(data){
+                            $scope.results = data;
+                            });
+                            })
+                        </code></pre>
+                            <p>See the Pen <a href='http://codepen.io/dslack/pen/HsiDa/'>HsiDa</a> by Dan Slack (<a href='http://codepen.io/dslack'>@dslack</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+                        </div><script async src="//codepen.io/assets/embed/ei.js"></script>
                     </section>
                 </section>
 
@@ -279,7 +314,16 @@ $ ionic start IonicWorkout tabs
                     </section>
                     <section>
                         <h2>Headers and Footers</h2>
-                        <iframe width="100%" height="600" src="http://jsfiddle.net/dslack/tbm6jbqj/embedded/html,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                        <div data-height="268" data-theme-id="8611" data-slug-hash="nyJzf" data-default-tab="html" data-user="dslack" class='codepen'><pre><code>&lt;div ng-app=&quot;ionicApp&quot;&gt;
+                            &lt;div class=&quot;bar bar-header bar-positive&quot;&gt;
+                            &lt;h1 class=&quot;title&quot;&gt;Header Bar&lt;/h1&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;bar bar-footer bar-balanced&quot;&gt;
+                            &lt;div class=&quot;title&quot;&gt;Footer&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;/div&gt;</code></pre>
+                            <p>See the Pen <a href='http://codepen.io/dslack/pen/nyJzf/'>nyJzf</a> by Dan Slack (<a href='http://codepen.io/dslack'>@dslack</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+                        </div><script async src="//codepen.io/assets/embed/ei.js"></script>
                     </section>
                     <section>
                         <h2>Buttons</h2>
