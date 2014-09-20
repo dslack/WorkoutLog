@@ -130,7 +130,7 @@
                 </section>
                 <section>
                     <h2>Controllers and $scope</h2>
-                    <iframe width="100%" height="350" src="http://jsfiddle.net/dslack/zq7m80r4/embedded/html/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    <iframe width="100%" height="250" src="http://jsfiddle.net/dslack/zq7m80r4/embedded/html/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
                     <iframe width="100%" height="250" src="http://jsfiddle.net/dslack/zq7m80r4/embedded/js,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
                 </section>
 
@@ -146,24 +146,24 @@
                     </code></pre>
                     <pre><code data-trim ng-non-bindable>
 angular.module('AngularDemo', ['ngRoute']).config(function($routeProvider){
-        $routeProvider
-            .when('/', {
-                templateUrl: 'partial/main.html',
-                controller: 'MainController'
-            })
-            .when('/page1',{
-                templateUrl: 'partial/page1.html',
-                controller: 'Page1Controller'
-            })
-            .otherwise({
-                redirectTo: '/'
-            })
-    });
+    $routeProvider
+        .when('/', {
+            templateUrl: 'partial/main.html',
+            controller: 'MainController'
+        })
+        .when('/page1',{
+            templateUrl: 'partial/page1.html',
+            controller: 'Page1Controller'
+        })
+        .otherwise({
+            redirectTo: '/'
+        })
+});
                         </code></pre>
                     </section>
                     <section>
                         <h2>Routing and Views</h2>
-                        <iframe width="100%" height="300" src="http://jsfiddle.net/dslack/kt9pjuhh/embedded/html,js,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                        <iframe width="100%" height="300" src="http://jsfiddle.net/dslack/kt9pjuhh/embedded/js,html,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
                     </section>
                 </section>
                 <section>
@@ -215,7 +215,57 @@ angular.module('AngularDemo', ['ngRoute']).config(function($routeProvider){
 
                 <section>
                     <h2>Ionic Framework</h2>
+                    <p>Ionic is a HTML5 mobile framework, designed using AngularJS and PhoneGap.  It gives us native-looking CSS and widgets.</p>
                 </section>
+                <section>
+                    <h2>About Ionic</h2>
+                    <ul>
+                        <li>Developed by Drifty (makers of Codiqa and Jetstrap)</li>
+                        <li>Launched last year</li>
+                        <li>Native-like mobile apps using AngularJS</li>
+                        <li>Phonegap support is baked into the toolset</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Initializing</h2>
+                    <p>Ionic has a dependency on NodeJS</p>
+                    <p class="fragment"></p>
+                </section>
+                <section>
+                    <section>
+                        <h2>CSS Framework</h2>
+                        <p>A robust CSS framework comes baked in</p>
+                        <ul>
+                            <li class="fragment">Headers and Footers</li>
+                            <li class="fragment">Buttons</li>
+                            <li class="fragment">Lists</li>
+                            <li class="fragment">Cards</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Headers and Footers</h2>
+                        <iframe width="100%" height="300" src="http://jsfiddle.net/dslack/tbm6jbqj/embedded/html,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    </section>
+                    <section>
+                        <h2>Buttons</h2>
+                        <iframe width="100%" height="300" src="http://jsfiddle.net/dslack/6u03vuac/embedded/html,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    </section>
+                    <section>
+                        <h2>Lists</h2>
+                        <iframe width="100%" height="300" src="http://jsfiddle.net/dslack/vps256nc/embedded/html,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    </section>
+                    <section>
+                        <h2>Cards</h2>
+                        <iframe width="100%" height="300" src="http://jsfiddle.net/dslack/x3507amv/embedded/html,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    </section>
+                    <section>
+                        <h2>More!!</h2>
+                        <p>Go to <a href="http://ionicframework.com/docs/components">http://ionicframework.com/docs/components</a> to see the rest of the CSS components</p>
+                    </section>
+                </section>
+            <section>
+
+            </section>
 
 			</div>
 
