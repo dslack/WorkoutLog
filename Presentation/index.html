@@ -99,7 +99,15 @@
                 <section>
                     <h2>Directives</h2>
                     <p>Directives are essentially "Web Components".</p>
-                    <iframe width="100%" height="300" src="http://jsfiddle.net/dslack/0wwg6qu2/embedded/html,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    <div data-height="250" data-theme-id="8611" data-slug-hash="hIKDc" data-default-tab="html" data-user="dslack" class='codepen'><pre><code>&lt;div ng-app ng-init=&quot;isViewable=true; items = [{name:&#39;Hello&#39;},{name:&#39;World&#39;}]&quot;&gt;
+    &lt;div ng-if=&quot;isViewable&quot;&gt;
+        &lt;ul&gt;
+            &lt;li ng-repeat=&quot;item in items&quot;&gt;{{item.name}}&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>See the Pen <a href='http://codepen.io/dslack/pen/hIKDc/'>hIKDc</a> by Dan Slack (<a href='http://codepen.io/dslack'>@dslack</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+</div><script async src="//codepen.io/assets/embed/ei.js"></script>
                 </section>
 
 				<section>
@@ -107,13 +115,29 @@
 					<p>
                         Two-way data binding is a huge part of AngularJS, and can be demonstrated with some fancy directives
 					</p>
-                    <iframe width="100%" height="300" src="http://jsfiddle.net/dslack/3epgegtc/embedded/html,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    <div data-height="292" data-theme-id="8611" data-slug-hash="ujilz" data-default-tab="html" data-user="dslack" class='codepen'><pre><code>&lt;div ng-app&gt;
+  &lt;div&gt;
+    &lt;form role=&quot;form&quot;&gt;
+      &lt;div class=&quot;form-group col-sm-3&quot;&gt;
+        &lt;label&gt;Search Text&lt;/label&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; ng-model=&quot;searchText&quot;/&gt;
+        &lt;strong&gt;{{searchText | uppercase}}&lt;/strong&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>See the Pen <a href='http://codepen.io/dslack/pen/ujilz/'>ujilz</a> by Dan Slack (<a href='http://codepen.io/dslack'>@dslack</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+</div><script async src="//codepen.io/assets/embed/ei.js"></script>
 				</section>
 
                 <section>
                     <h2>Filters</h2>
                     <p>Notice from the other slide...</p>
-                    <iframe  width="100%" height="300" src="http://jsfiddle.net/dslack/3epgegtc/embedded/html/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    <pre><code>
+...
+<strong>{{searchText | uppercase}}</strong>
+ ...
+                    </code></pre>
                     <p class="fragment">Filters allow us to change the look of our text without actually changing the model itself.</p>
                 </section>
 
@@ -130,8 +154,16 @@
                 </section>
                 <section>
                     <h2>Controllers and $scope</h2>
-                    <iframe width="100%" height="250" src="http://jsfiddle.net/dslack/zq7m80r4/embedded/html/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-                    <iframe width="100%" height="250" src="http://jsfiddle.net/dslack/zq7m80r4/embedded/js,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    <div data-height="280" data-theme-id="8611" data-slug-hash="zgCsq" data-default-tab="js" data-user="dslack" class='codepen'><pre><code>angular.module(&#39;AngularDemo&#39;,[])
+    .controller(&#39;MyController&#39;, function($scope){
+        $scope.myDataValue = &#39;Hello NMM!&#39;;
+        $scope.reverse = function(){
+            $scope.myDataValue = $scope.myDataValue.split(&quot;&quot;)
+              .reverse().join(&quot;&quot;);
+        }
+    });</code></pre>
+<p>See the Pen <a href='http://codepen.io/dslack/pen/zgCsq/'>zgCsq</a> by Dan Slack (<a href='http://codepen.io/dslack'>@dslack</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+</div><script async src="//codepen.io/assets/embed/ei.js"></script>
                 </section>
 
                 <section>
@@ -163,7 +195,7 @@ angular.module('AngularDemo', ['ngRoute']).config(function($routeProvider){
                     </section>
                     <section>
                         <h2>Routing and Views</h2>
-                        <iframe width="100%" height="300" src="http://jsfiddle.net/dslack/kt9pjuhh/embedded/js,html,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                        <iframe width="100%" height="500" src="http://jsfiddle.net/dslack/kt9pjuhh/embedded/js,html,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
                     </section>
                 </section>
                 <section>
@@ -191,7 +223,7 @@ angular.module('AngularDemo', ['ngRoute']).config(function($routeProvider){
                     </section>
                     <section>
                         <h2>Services</h2>
-                        <iframe width="100%" height="400" src="http://jsfiddle.net/dslack/c462oywf/embedded/js,html,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                        <iframe width="100%" height="500" src="http://jsfiddle.net/dslack/c462oywf/embedded/js,html,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
                     </section>
                 </section>
 
@@ -220,16 +252,19 @@ angular.module('AngularDemo', ['ngRoute']).config(function($routeProvider){
                 <section>
                     <h2>About Ionic</h2>
                     <ul>
-                        <li>Developed by Drifty (makers of Codiqa and Jetstrap)</li>
-                        <li>Launched last year</li>
-                        <li>Native-like mobile apps using AngularJS</li>
-                        <li>Phonegap support is baked into the toolset</li>
+                        <li class="fragment roll-in">Developed by Drifty (makers of Codiqa and Jetstrap)</li>
+                        <li class="fragment roll-in">Launched last year</li>
+                        <li class="fragment roll-in">Native-like mobile apps using AngularJS</li>
+                        <li class="fragment roll-in">Phonegap support is baked into the toolset</li>
                     </ul>
                 </section>
                 <section>
                     <h2>Initializing</h2>
-                    <p>Ionic has a dependency on NodeJS</p>
-                    <p class="fragment"></p>
+                    <p>Ionic has a dependency on NodeJS to initialize your app</p>
+                    <pre class="fragment grow"><code data-trim ng-non-bindable>
+$ npm install -g cordova ionic
+$ ionic start IonicWorkout tabs
+                    </code></pre>
                 </section>
                 <section>
                     <section>
@@ -244,28 +279,44 @@ angular.module('AngularDemo', ['ngRoute']).config(function($routeProvider){
                     </section>
                     <section>
                         <h2>Headers and Footers</h2>
-                        <iframe width="100%" height="300" src="http://jsfiddle.net/dslack/tbm6jbqj/embedded/html,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                        <iframe width="100%" height="600" src="http://jsfiddle.net/dslack/tbm6jbqj/embedded/html,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
                     </section>
                     <section>
                         <h2>Buttons</h2>
-                        <iframe width="100%" height="300" src="http://jsfiddle.net/dslack/6u03vuac/embedded/html,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                        <iframe width="100%" height="500" src="http://jsfiddle.net/dslack/6u03vuac/embedded/html,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
                     </section>
                     <section>
                         <h2>Lists</h2>
-                        <iframe width="100%" height="300" src="http://jsfiddle.net/dslack/vps256nc/embedded/html,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                        <iframe width="100%" height="500" src="http://jsfiddle.net/dslack/vps256nc/embedded/html,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
                     </section>
                     <section>
                         <h2>Cards</h2>
-                        <iframe width="100%" height="300" src="http://jsfiddle.net/dslack/x3507amv/embedded/html,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                        <iframe width="100%" height="500" src="http://jsfiddle.net/dslack/x3507amv/embedded/html,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
                     </section>
                     <section>
                         <h2>More!!</h2>
                         <p>Go to <a href="http://ionicframework.com/docs/components">http://ionicframework.com/docs/components</a> to see the rest of the CSS components</p>
                     </section>
                 </section>
-            <section>
-
-            </section>
+                <section>
+                    <section>
+                        <h2>Extensions</h2>
+                        <p>Tons of widgets available to create native-like apps</p>
+                        <ul>
+                            <li class="fragment">Header/Footers</li>
+                            <li class="fragment">Modal Windows</li>
+                            <li class="fragment">Action Sheets</li>
+                            <li class="fragment">Tabs</li>
+                            <li class="fragment">Side Menus</li>
+                            <li class="fragment">and more...</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Header/Footers</h2>
+                        <p>Really just intelligent versions of the CSS ones</p>
+                     <iframe width="100%" height="500" src="http://jsfiddle.net/dslack/mcnsp4u5/embedded/html,js,result/presentation" allowfullscreen="allowfullscreen" frameborder="0"></iframe>   
+                    </section>
+                </section>
 
 			</div>
 
