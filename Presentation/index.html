@@ -65,12 +65,12 @@
                 <section>
                     <h2>Agenda</h2>
                     <ul>
-                        <li>Angular JS Overview</li>
-                        <li class="fragment">Components</li>
-                        <li class="fragment">Demo of Angular JS App</li>
-                        <li class="fragment">Ionic Overview</li>
-                        <li class="fragment">Ionic Components</li>
-                        <li class="fragment">Mobilification of Angular Demo App using Ionic</li>
+                        <li class="fragment roll-in">Angular JS Overview</li>
+                        <li class="fragment roll-in">Components</li>
+                        <li class="fragment roll-in">Demo of Angular JS App</li>
+                        <li class="fragment roll-in">Ionic Overview</li>
+                        <li class="fragment roll-in">Ionic Components</li>
+                        <li class="fragment roll-in">Mobilification of Angular Demo App using Ionic</li>
                     </ul>
                     <aside class="notes">
                         Overview some of the AngularJS components, such as Directives, Controllers, Views and Routing, and briefly Services
@@ -86,61 +86,72 @@
 				</section>
 
 				<section>
-					<h2>AngularJS</h2>
+					<h2>About AngularJS</h2>
 					<p>
 						<strong>NOTE:</strong> I will only be covering the basics of AngularJS.
 					</p>
                     <ul>
-                        <li>Open Source Framework (In Development for 5 years)</li>
-                        <li>Maintained by Google Employees</li>
-                        <li>Is a MVW Framework (Model-View-'Whatever')</li>
+                        <li class="fragment roll-in">Open Source Framework (In Development for 5 years)</li>
+                        <li class="fragment roll-in">Maintained by Google Employees</li>
+                        <li class="fragment roll-in">Is a MVW Framework (Model-View-'Whatever')</li>
                     </ul>
 				</section>
                 <section>
-                    <h2>Directives</h2>
-                    <p>Directives are essentially "Web Components".</p>
-                    <div data-height="250" data-theme-id="8611" data-slug-hash="hIKDc" data-default-tab="html" data-user="dslack" class='codepen'><pre><code>&lt;div ng-app ng-init=&quot;isViewable=true; items = [{name:&#39;Hello&#39;},{name:&#39;World&#39;}]&quot;&gt;
-    &lt;div ng-if=&quot;isViewable&quot;&gt;
-        &lt;ul&gt;
-            &lt;li ng-repeat=&quot;item in items&quot;&gt;{{item.name}}&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-<p>See the Pen <a href='http://codepen.io/dslack/pen/hIKDc/'>hIKDc</a> by Dan Slack (<a href='http://codepen.io/dslack'>@dslack</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-</div><script async src="//codepen.io/assets/embed/ei.js"></script>
+                    <h2>Major Parts of AngularJS</h2>
+                    <p>There are several parts that make up an AngularJS app</p>
+                    <ul>
+                        <li class="fragment roll-in">Directives</li>
+                        <li class="fragment roll-in">Controllers</li>
+                        <li class="fragment roll-in">Routing</li>
+                        <li class="fragment roll-in">Services</li>
+                    </ul>
                 </section>
-
-				<section>
-					<h2>Directives</h2>
-					<p>
-                        Two-way data binding is a huge part of AngularJS, and can be demonstrated with some fancy directives
-					</p>
-                    <div data-height="292" data-theme-id="8611" data-slug-hash="ujilz" data-default-tab="html" data-user="dslack" class='codepen'><pre><code>&lt;div ng-app&gt;
-  &lt;div&gt;
-    &lt;form role=&quot;form&quot;&gt;
-      &lt;div class=&quot;form-group col-sm-3&quot;&gt;
-        &lt;label&gt;Search Text&lt;/label&gt;
-        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; ng-model=&quot;searchText&quot;/&gt;
-        &lt;strong&gt;{{searchText | uppercase}}&lt;/strong&gt;
-      &lt;/div&gt;
-    &lt;/form&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-<p>See the Pen <a href='http://codepen.io/dslack/pen/ujilz/'>ujilz</a> by Dan Slack (<a href='http://codepen.io/dslack'>@dslack</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-</div><script async src="//codepen.io/assets/embed/ei.js"></script>
-				</section>
-
                 <section>
-                    <h2>Filters</h2>
-                    <p>Notice from the other slide...</p>
-                    <pre><code>
-...
-<strong>{{searchText | uppercase}}</strong>
- ...
-                    </code></pre>
-                    <p class="fragment">Filters allow us to change the look of our text without actually changing the model itself.</p>
-                </section>
+                   <section>
+                        <h2>Directives</h2>
+                        <p>Directives are essentially "Web Components".</p>
+                        <div data-height="250" data-theme-id="8611" data-slug-hash="hIKDc" data-default-tab="html" data-user="dslack" class='codepen'><pre><code>&lt;div ng-app ng-init=&quot;isViewable=true; items = [{name:&#39;Hello&#39;},{name:&#39;World&#39;}]&quot;&gt;
+                            &lt;div ng-if=&quot;isViewable&quot;&gt;
+                            &lt;ul&gt;
+                            &lt;li ng-repeat=&quot;item in items&quot;&gt;{{item.name}}&lt;/li&gt;
+                            &lt;/ul&gt;
+                            &lt;/div&gt;
+                            &lt;/div&gt;</code></pre>
+                            <p>See the Pen <a href='http://codepen.io/dslack/pen/hIKDc/'>hIKDc</a> by Dan Slack (<a href='http://codepen.io/dslack'>@dslack</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+                        </div><script async src="//codepen.io/assets/embed/ei.js"></script>
+                    </section>
 
+                    <section>
+                        <h2>Directives</h2>
+                        <p>
+                            Two-way data binding is a huge part of AngularJS, and can be demonstrated with some fancy directives
+                        </p>
+                        <div data-height="292" data-theme-id="8611" data-slug-hash="ujilz" data-default-tab="html" data-user="dslack" class='codepen'><pre><code>&lt;div ng-app&gt;
+                            &lt;div&gt;
+                            &lt;form role=&quot;form&quot;&gt;
+                            &lt;div class=&quot;form-group col-sm-3&quot;&gt;
+                            &lt;label&gt;Search Text&lt;/label&gt;
+                            &lt;input type=&quot;text&quot; class=&quot;form-control&quot; ng-model=&quot;searchText&quot;/&gt;
+                            &lt;strong&gt;{{searchText | uppercase}}&lt;/strong&gt;
+                            &lt;/div&gt;
+                            &lt;/form&gt;
+                            &lt;/div&gt;
+                            &lt;/div&gt;</code></pre>
+                            <p>See the Pen <a href='http://codepen.io/dslack/pen/ujilz/'>ujilz</a> by Dan Slack (<a href='http://codepen.io/dslack'>@dslack</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+                        </div><script async src="//codepen.io/assets/embed/ei.js"></script>
+                    </section>
+
+                    <section>
+                        <h2>Filters</h2>
+                        <p>Notice from the other slide...</p>
+                        <pre><code>
+                            ...
+                            <strong>{{searchText | uppercase}}</strong>
+                            ...
+                        </code></pre>
+                        <p class="fragment">Filters allow us to change the look of our text without actually changing the model itself.</p>
+                    </section>
+                </section>
                 <section>
                     <h2>Controllers and $scope</h2>
                     <p class="fragment shrink">The main way to get data from and to the View is to use Controllers.
@@ -518,8 +529,65 @@ $ ionic start IonicWorkout tabs
 <p>See the Pen <a href='http://codepen.io/dslack/pen/EAgGd/'>EAgGd</a> by Dan Slack (<a href='http://codepen.io/dslack'>@dslack</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 </div><script async src="//codepen.io/assets/embed/ei.js"></script>
                     </section>
+                    <section>
+                        <h2>And much, much more</h2>
+                        <p>Lots of extensions, and other mobile-friendly features</p>
+                        <p>Go to <a href="http://ionicframework.com/docs/api/">http://ionicframework.com/docs/api/</a></p>
+                    </section>
                 </section>
+                <section>
+                    <section>
+                        <h2>Differences from base AngularJS</h2>
+                        <ul  class=no-style>
+                            <li>Ionic uses the UI-Router project</li>
+                            <li class="fragment roll-in">Lets us define multiple views where content can be loaded into</li>
+                            <li class="fragment roll-in">Also is stateful and allows for 'parent' routes (for common templating)</li>
+                            <li class="fragment roll-in">This difference was the biggest hurdle I had to get over</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Example of UI-Router</h2>
+                        <pre><code data-trim>
+angular.module('ionicApp', ['ionic'])
+    .config(function($stateProvider, $urlRouterProvider) {
+        $stateProvider
+            .state('tabs', {
+                url: "/tab",
+                abstract: true,
+                templateUrl: "templates/tabs.html"
+            })
+            .state('tabs.home', {
+                url: "/home",
+                views: {
+                    'home-tab': {
+                        templateUrl: "templates/home.html",
+                        controller: 'HomeTabCtrl'
+                    }
+                }
+            })
+    })
+                        </code></pre>
+                    </section>
+                </section>
+            <section>
+                <h1>Demo Time!</h1>
+            </section>
 
+            <section>
+                <h2>Last details about Ionic</h2>
+                <p>Lots of new Components added (Static Side Menu, Keyboard, etc)</p>
+                <p class="fragment">Other projects are coming from that team:</p>
+                <ul class="no-style">
+                    <li class="fragment roll-in">Ionicons - Icon set</li>
+                    <li class="fragment roll-in">ngCordova - AngularJS style extensions for Phonegap/Cordova</li>
+                    <li class="fragment roll-in">Ionic Box - Ready-to-go dev. environment to build Ionic Apps onto Android.</li>
+                    <li class="fragment roll-in">Creator - a GUI-based Ionic designer (soon to be in Beta)</li>
+                </ul>
+            </section>
+            <section>
+                <h1>Thanks for listening!</h1>
+                <h2>Questions?</h2>
+            </section>
 			</div>
 
 		</div>

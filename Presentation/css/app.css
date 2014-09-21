@@ -15,3 +15,8 @@
 html .reveal .slides .left {
     text-align:left;
 }
+
+ul.no-style {
+    list-style-type: none;
+    margin:0;
+}
