@@ -1,15 +1,28 @@
-angular.module('starter.controllers', [])
-
-.controller('DashCtrl', function($scope) {
+angular.module('controllers', ['services'])
+.controller('HistoryController', function($scope) {
 })
-
-.controller('FriendsCtrl', function($scope, Friends) {
-  $scope.friends = Friends.all();
+.controller('HistoryDetailController', function($scope, $stateParams) {
+  	$stateParams.workoutId;
 })
-
-.controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
-  $scope.friend = Friends.get($stateParams.friendId);
+.controller('WorkoutController', function($scope, WorkoutData) {
+  $scope.workoutData = WorkoutData;
 })
+.controller('NewWorkoutController', function($scope,$stateParams, WorkoutData){
+	var _type = $stateParams.type
+	$scope.data = {
+        type: _type,
+        newWorkout : {}
+    };
 
-.controller('AccountCtrl', function($scope) {
-});
+    $scope.data.workout = angular.copy(_.find(WorkoutData.workouts, function(w){
+        return (w.type === _type);
+    }));
+
+    $scope.saveWorkout = function(){
+        var _storedWorkout = Storage.get(KEY);
+        $scope.data.workout.date = new Date();
+        _storedWorkout.push($scope.data.workout);
+        Storage.set(KEY, _storedWorkout);
+        $location.path('/');
+    };
+})
