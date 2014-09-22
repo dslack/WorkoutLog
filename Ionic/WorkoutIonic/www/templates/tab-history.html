@@ -1,8 +1,9 @@
 <ion-view title="History">
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="h in history" type="item-text-wrap" href="#/tab/workout/{{$index}}">
+      <ion-item ng-repeat="h in history" type="item-text-wrap" href="#/tab/history/{{$index}}" class="item-icon-right">
         {{h.type}}</a> on {{h.date | date : 'MMMM d, yyyy'}}
+        <i class="icon ion-arrow-right-c"></i>
       </ion-item>
     </ion-list>
   </ion-content>

@@ -9,6 +9,7 @@ angular.module('IonicWorkout', ['ionic', 'controllers', 'services'])
     }
   });
 })
+.constant('KEY', "Workout")
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('tab', {

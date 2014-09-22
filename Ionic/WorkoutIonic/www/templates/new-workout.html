@@ -1,16 +1,23 @@
-<ion-list>
-    <ion-item ng-repeat="exercise in data.workout.exercises" class="item-input input-stacked-label">
-        <span class="input-label">{{exercise.name}}</span>
-        <div ng-if="exercise.type == 'R'">
-            <input type="text" ng-model="data.workout.exercises[$index].reps" id="{{$index}}" placeholder="Reps"/>
-        </div>
-        <div ng-if="exercise.type == 'RW'">
-            <input type="text" ng-model="data.workout.exercises[$index].reps" id="{{$index}}" placeholder="Reps"/>
-            <input type="text" ng-model="data.workout.exercises[$index].weight" placeholder="Weight"/>
-        </div>
-        <div ng-if="exercise.type == 'L'">
-            <input type="text" class="form-control" id="{{$index}}" ng-model="data.workout.exercises[$index].length" placeholder="Length"/>
-        </div>
-    </ion-item>        
-    <button class="item item-input" ng-click="saveWorkout()">Save Workout</button>
-</ion-list>
+<ion-header-bar class="bar-positive">
+    <h1 class="title">New Workout</h1>
+    <button class="button button-balanced" ng-click="saveWorkout()">Save</button>
+</ion-header-bar>
+<ion-content class="padding" has-tabs="true">
+    <ion-list>
+        <ion-item ng-repeat="exercise in data.workout.exercises" class="item-input input-stacked-label" item="exercise">
+            <div class="row">
+                <span class="input-label col col-67">{{exercise.name}}</span>
+                <div ng-if="exercise.type == 'R'" class="col col-33">
+                    <input type="text" ng-model="data.workout.exercises[$index].reps" id="{{$index}}" placeholder="Reps"/>
+                </div>
+                <div ng-if="exercise.type == 'RW'" class="col col-33">
+                    <input type="text" ng-model="data.workout.exercises[$index].reps" id="{{$index}}" placeholder="Reps"/>
+                    <input type="text" ng-model="data.workout.exercises[$index].weight" placeholder="Weight"/>
+                </div>
+                <div ng-if="exercise.type == 'L'" class="col col-33">
+                    <input type="text" class="form-control" id="{{$index}}" ng-model="data.workout.exercises[$index].length" placeholder="Length"/>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

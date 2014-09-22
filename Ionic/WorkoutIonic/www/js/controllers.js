@@ -1,14 +1,17 @@
 angular.module('controllers', ['services'])
-.controller('HistoryController', function($scope) {
+.controller('HistoryController', function($scope, Storage, KEY) {
+    $scope.history = Storage.get(KEY);
 })
-.controller('HistoryDetailController', function($scope, $stateParams) {
-  	$stateParams.workoutId;
+.controller('HistoryDetailController', function($scope, $stateParams, Storage, KEY) {
+    var _index = $stateParams.workoutId;;
+    var workout = Storage.get(KEY)[_index];
+    $scope.workout = workout;
 })
 .controller('WorkoutController', function($scope, WorkoutData) {
   $scope.workoutData = WorkoutData;
 })
-.controller('NewWorkoutController', function($scope,$stateParams, WorkoutData){
-	var _type = $stateParams.type
+.controller('NewWorkoutController', function($scope, $stateParams, $state, WorkoutData, Storage, KEY){
+	var _type = $stateParams.type;
 	$scope.data = {
         type: _type,
         newWorkout : {}
@@ -23,6 +26,6 @@ angular.module('controllers', ['services'])
         $scope.data.workout.date = new Date();
         _storedWorkout.push($scope.data.workout);
         Storage.set(KEY, _storedWorkout);
-        $location.path('/');
+        $state.go('tab.history');
     };
 })
