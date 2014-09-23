@@ -332,13 +332,20 @@ angular.module('AngularDemo', [])
                     </ul>
                 </section>
                 <section>
-                    <h2>Initializing</h2>
-                    <p>Ionic has a dependency on NodeJS to initialize your app</p>
-                    <pre class="fragment grow"><code data-trim ng-non-bindable>
+                    <section>
+                        <h2>Initializing</h2>
+                        <p>Ionic has a dependency on NodeJS to initialize your app</p>
+                        <pre class="fragment grow"><code data-trim ng-non-bindable>
 $ npm install -g cordova ionic
 $ ionic start IonicWorkout tabs
-                    </code></pre>
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Ionic Templates</h2>
+                        <img src="images/ionic.png"></img>
+                    </section> 
                 </section>
+ 
                 <section>
                     <section>
                         <h2>CSS Framework</h2>
@@ -452,9 +459,25 @@ $ ionic start IonicWorkout tabs
                     <section>
                         <h2>Header/Footers</h2>
                         <p>Really just intelligent versions of the CSS ones</p>
-<p data-height="399" data-theme-id="8611" data-slug-hash="pihzK" data-default-tab="result" data-user="dslack" class='codepen'>See the Pen <a href='http://codepen.io/dslack/pen/pihzK/'>pihzK</a> by Dan Slack (<a href='http://codepen.io/dslack'>@dslack</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//codepen.io/assets/embed/ei.js"></script>
-                        <p class="printOnly">See <a href="http://codepen.io/dslack/pen/pihzK">http://codepen.io/dslack/pen/pihzK</a> for Code</p>
+                        <div data-height="400" data-theme-id="8611" data-slug-hash="pihzK" data-default-tab="html" data-user="dslack" class='codepen'><pre><code>&lt;div ng-app=&quot;ionicApp&quot; class=&quot;preview&quot;&gt;
+    &lt;ion-header-bar align-title=&quot;left&quot; class=&quot;bar-positive&quot;&gt;
+      &lt;div class=&quot;buttons&quot;&gt;
+        &lt;button class=&quot;button&quot; ng-click=&quot;doSomething()&quot;&gt;Left Button&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;h1 class=&quot;title&quot;&gt;Header!&lt;/h1&gt;
+    &lt;/ion-header-bar&gt;
+    &lt;ion-content&gt;
+      Some content!
+    &lt;/ion-content&gt;
+    &lt;ion-footer-bar align-title=&quot;left&quot; class=&quot;bar-assertive&quot;&gt;
+      &lt;h1 class=&quot;title&quot;&gt;Footer!&lt;/h1&gt;
+      &lt;div class=&quot;buttons&quot; ng-click=&quot;doSomethingElse()&quot;&gt;
+        &lt;button class=&quot;button button-royal&quot;&gt;Right Button&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/ion-footer-bar&gt;
+&lt;/div&gt;</code></pre>
+<p>See the Pen <a href='http://codepen.io/dslack/pen/pihzK/'>pihzK</a> by Dan Slack (<a href='http://codepen.io/dslack'>@dslack</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+</div><script async src="//codepen.io/assets/embed/ei.js"></script>
                     </section>
                     <section>
                         <h2>Modal Windows</h2>
@@ -573,7 +596,7 @@ $ ionic start IonicWorkout tabs
                 </section>
                 <section>
                     <section>
-                        <h2>Differences from base AngularJS</h2>
+                        <h2>Differences from AngularJS</h2>
                         <ul>
                             <li>Ionic uses the UI-Router project</li>
                             <li class="fragment roll-in">Lets us define multiple views where content can be loaded into</li>
@@ -621,8 +644,8 @@ angular.module('ionicApp', ['ionic'])
                 </ul>
             </section>
             <section>
-                <h1>Thanks for listening!</h1>
-                <h2>Questions?</h2>
+                <h2>Thanks for listening!</h2>
+                <h3>Questions?</h3>
             </section>
 			</div>
 
