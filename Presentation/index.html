@@ -215,7 +215,7 @@ angular.module('AngularDemo', ['ngRoute']).config(function($routeProvider){
                     </section>
                     <section>
                         <h2>Routing and Views</h2>
-                        <div data-height="268" data-theme-id="8611" data-slug-hash="Degxf" data-default-tab="js" data-user="dslack" class='codepen'><pre><code>angular.module(&#39;AngularDemo&#39;, [&#39;ngRoute&#39;]).config(function($routeProvider){
+                        <div data-height="400" data-theme-id="8611" data-slug-hash="Degxf" data-default-tab="js" data-user="dslack" class='codepen'><pre><code>angular.module(&#39;AngularDemo&#39;, [&#39;ngRoute&#39;]).config(function($routeProvider){
                             $routeProvider
                             .when(&#39;/&#39;, {
                             templateUrl: &#39;main.html&#39;,
@@ -242,11 +242,6 @@ angular.module('AngularDemo', ['ngRoute']).config(function($routeProvider){
                         <p>As part of good design practice, we should try and put all extractable code into services.  AJAX calls, helpers, etc should be services</p>
                         <pre><code data-trim ng-non-bindable>
     angular.module('AngularDemo', [])
-        .controller('MainController', function(EchoService){
-            EchoService.get().then(function(data){
-                $scope.results = data;
-            });
-        })
         .factory('EchoService', function($http){
             return {
                 get: function(){
@@ -257,6 +252,11 @@ angular.module('AngularDemo', ['ngRoute']).config(function($routeProvider){
                 }
             };
         })
+        .controller('MainController', function(EchoService){
+            EchoService.get().then(function(data){
+                $scope.results = data;
+            });
+        });        
                         </code></pre>
                     </section>
                     <section>
@@ -292,10 +292,21 @@ angular.module('AngularDemo', ['ngRoute']).config(function($routeProvider){
                         <li>Reusable component</li>
                         <li>Cleaner code</li>
                     </ul>
-                    <pre class="fragment grow"><code data-trim ng-non-bindable>
+                    <pre><code data-trim ng-non-bindable>
 <my-custom-directive content="someVariableFromScope"></my-custom-directive>
                     </code></pre>
-                        </span>
+
+                    <pre><code data-trim ng-non-bindable>
+.directive('myCustomDirective', {
+    return {
+        restrict: 'E',
+        scope:{
+            content: "="
+        },
+        templateUrl: 'myDirective.html'
+    }
+})
+                    </code></pre>                    
                 </section>
 
                 <section>
@@ -614,7 +625,7 @@ angular.module('ionicApp', ['ionic'])
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
-        <script type="text/javascript" src="http://slidemote.jit.su/slidemote.js#fade123"></script>
+        
 		<script>
 			Reveal.initialize({
 				controls: true,

@@ -1,0 +1,17 @@
+  <ion-view title="Workout">
+  <ion-content class="padding">
+  	<div class="list">
+	  <label class="item item-input item-select">
+	    <div class="input-label">
+	      Workouts
+	    </div>
+		<select class="form-control" ng-model="workoutType" ng-options="w.type as w.type for w in workoutData.workouts">
+            <option value="">Select a Workout Type</option>
+        </select>
+	  </label>
+	</div>
+	<div class="padding">
+		<button class="button button-block button-positive" ng-disabled="!workoutType">Add Workout</a>
+	</div>
+  </ion-content>
+</ion-view>
