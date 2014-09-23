@@ -25,15 +25,6 @@ angular.module('IonicWorkout', ['ionic', 'controllers', 'services'])
         }
       }
     })
-    .state('tab.history-detail', {
-      url: '/history/:workoutId',
-      views: {
-        'tab-history': {
-          templateUrl: 'templates/workout-detail.html',
-          controller: 'HistoryDetailController'
-        }
-      }
-    })
 
     .state('tab.workout', {
       url: '/workout',
@@ -41,15 +32,6 @@ angular.module('IonicWorkout', ['ionic', 'controllers', 'services'])
         'tab-workout': {
           templateUrl: 'templates/tab-workout.html',
           controller: 'WorkoutController'
-        }
-      }
-    })
-    .state('tab.workoutNew',{
-      url:'/workout/:type',
-      views:{
-        'tab-workout':{
-          templateUrl:'templates/new-workout.html',
-          controller:'NewWorkoutController'
         }
       }
     });
