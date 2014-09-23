@@ -70,7 +70,7 @@
                     <p>
                         Introduced to AngularJS nine months ago, working with it in production....    
                     </p>
-                    <p>Worked with Ionic for the past 5 months...</p>
+                    <p>Worked with Ionic for the past 5 months...</p> 
 				</section>
                 <section>
                     <h2>Agenda</h2>
@@ -245,22 +245,23 @@ angular.module('AngularDemo', ['ngRoute']).config(function($routeProvider){
                         <h2>Services</h2>
                         <p>As part of good design practice, we should try and put all extractable code into services.  AJAX calls, helpers, etc should be services</p>
                         <pre><code data-trim ng-non-bindable>
-    angular.module('AngularDemo', [])
-        .factory('EchoService', function($http){
-            return {
-                get: function(){
-                    return $http.get('https://public.opencpu.org/ocpu/library/MASS/data/housing/json')
-                        .then(function(response){
-                            return response.data;
+angular.module('AngularDemo', [])
+    .factory('EchoService', function($http){    
+        return {
+            get: function(){
+              return $http.get('http://api.openweathermap.org/data/2.5/find?lat=50&lon=-97&cnt=10')
+                    .then(function(response){
+                        return response.data.list;
                     });
-                }
-            };
-        })
-        .controller('MainController', function(EchoService){
-            EchoService.get().then(function(data){
-                $scope.results = data;
-            });
-        });        
+            }
+        };
+    })
+    .controller('MyController', function($scope, EchoService){
+        EchoService.get().then(function(data){
+            $scope.results = data;
+        });
+    })
+      
                         </code></pre>
                     </section>
                     <section>
