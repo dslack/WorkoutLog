@@ -5,13 +5,13 @@
 	    <div class="input-label">
 	      Workouts
 	    </div>
-		<select class="form-control" ng-model="workoutType" ng-options="w.type as w.type for w in workoutData.workouts">
+		<select class="form-control" ng-model="data.workoutType" ng-options="w.type as w.type for w in data.workouts">
             <option value="">Select a Workout Type</option>
         </select>
 	  </label>
 	</div>
 	<div class="padding">
-		<button class="button button-block button-positive" ng-disabled="!workoutType">Add Workout</a>
+		<button class="button button-block button-positive" ng-disabled="!data.workoutType">Add Workout</a>
 	</div>
   </ion-content>
 </ion-view>
