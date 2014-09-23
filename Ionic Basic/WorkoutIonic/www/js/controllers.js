@@ -16,7 +16,7 @@ angular.module('controllers', ['services'])
     $scope.addWorkout = function(){
         //We have the workout available...
         WorkoutData.addWorkout($scope.data.workoutType);
-        $scope.data.workout = null;
+        $scope.data.workoutType = null;
         $scope.data.history = Storage.get("workout");
     };
 });
